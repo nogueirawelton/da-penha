@@ -171,6 +171,9 @@
       padding-inline: 1rem;
       height: 100%;
       position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
 
       @media (min-width: 1024px) {
         padding-inline: 2rem;
@@ -190,9 +193,9 @@
       }
 
       .timeline-item {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
+        & + .timeline-item {
+          padding-top: 10rem;
+        }
 
         .timeline-item-container {
           display: flex;
@@ -230,11 +233,11 @@
 
           .content {
             img {
-              margin-block: 2rem;
+              margin-bottom: 2rem;
             }
 
             p {
-              font-size: 1.125rem;
+              font-size: 1.25rem;
               line-height: 1.4;
 
               & + p {
@@ -243,51 +246,59 @@
             }
           }
         }
+      }
 
-        &:nth-child(1) {
-          padding-top: 5rem;
+      .left {
+        .timeline-item {
+          &:nth-child(1) {
+            padding-top: 5rem;
+          }
         }
 
-        &:nth-child(odd) {
-          .timeline-item-container {
-            grid-column: 1;
+        .timeline-item-container {
+          grid-column: 1;
 
-            .header {
-              order: 1;
+          .header {
+            order: 1;
 
-              strong {
-                margin-right: 2rem;
-              }
+            strong {
+              margin-right: 2rem;
+            }
 
-              .indicator {
-                margin-left: auto;
+            .indicator {
+              margin-left: auto;
 
-                &:after {
-                  left: 0;
-                  right: auto;
-                  transform: translate(calc(-100% + 10px), -50%);
-                }
+              &:after {
+                left: 0;
+                right: auto;
+                transform: translate(calc(-100% + 10px), -50%);
               }
             }
           }
         }
+      }
 
-        &:nth-child(even) {
-          .timeline-item-container {
-            grid-column: 2;
+      .right {
+        .timeline-item {
+          &:nth-child(1) {
+            padding-top: 15rem;
+          }
+        }
 
-            .header {
-              margin-right: auto;
+        .timeline-item-container {
+          grid-column: 2;
 
-              strong {
-                margin-left: 2rem;
-              }
+          .header {
+            margin-right: auto;
+
+            strong {
+              margin-left: 2rem;
             }
+          }
 
-            .content {
-              p {
-                text-align: right;
-              }
+          .content {
+            p {
+              text-align: right;
             }
           }
         }
