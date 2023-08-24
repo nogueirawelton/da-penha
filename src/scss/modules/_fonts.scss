@@ -1,0 +1,35 @@
+@font-face {
+  font-family: GooperRegular;
+  font-weight: 400;
+  src: url('../fonts/GooperRegular.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Gooper;
+  font-weight: 700;
+  src: url('../fonts/GooperBold.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: IntegralCF;
+  font-weight: 400;
+  src: url('../fonts/IntegralCFRegular.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: IntegralCF;
+  font-weight: 700;
+  src: url('../fonts/IntegralCFBold.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: IntegralCF;
+  font-weight: 700;
+  src: url('../fonts/IntegralCFBoldItalic.woff2') format('woff2');
+  font-display: swap;
+  font-style: italic;
+}

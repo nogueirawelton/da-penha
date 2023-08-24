@@ -1,0 +1,140 @@
+#inicio {
+  .banner {
+    position: relative;
+
+    video {
+      display: block;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      filter: brightness(0.6);
+    }
+
+    .container {
+      position: absolute;
+      width: calc(100% - 2rem);
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100vh;
+      top: 0;
+
+      @media (min-width: 1024px) {
+        width: calc(100% - 4rem);
+      }
+
+      .content {
+        padding-top: 8rem;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        bottom: 0;
+        max-width: 360px;
+
+        @media (min-width: 640px) {
+          max-width: 100%;
+        }
+
+        strong {
+          display: block;
+          line-height: 1.2;
+          color: var(--yellow-500);
+          text-transform: uppercase;
+          font-size: 2.75rem;
+          margin-bottom: 3rem;
+          position: relative;
+          font-family: IntegralCF;
+          font-weight: 700;
+
+          @media (min-width: 1024px) {
+            font-size: 3.5rem;
+          }
+
+          @media (min-width: 1536px) {
+            font-size: 4rem;
+          }
+
+          img {
+            user-select: none;
+            pointer-events: none;
+          }
+
+          span {
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+
+            .blink {
+              transform: translate(calc(100% + 20px), -20px);
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 40px;
+              padding: 0;
+
+              @media (min-width: 1024px) {
+                width: auto;
+                transform: translate(calc(100% + 30px), -30px);
+              }
+            }
+
+            img:not(.blink) {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              z-index: -1;
+              max-width: 110%;
+              object-fit: contain;
+              padding-top: 0.5rem;
+
+              @media (min-width: 1024px) {
+                padding-top: 1rem;
+              }
+
+              @media (min-width: 1536px) {
+                width: 520px;
+              }
+            }
+
+            &:last-of-type {
+              img:not(.blink) {
+                width: 400px;
+              }
+            }
+          }
+        }
+      }
+
+      .social {
+        position: absolute;
+        bottom: 1rem;
+        right: 0;
+        display: flex;
+        gap: 1rem;
+
+        @media (min-width: 1024px) {
+          bottom: 2rem;
+        }
+
+        a {
+          transition: all 0.3s;
+
+          &:hover {
+            filter: brightness(0.8);
+            transform: translateY(-0.5rem);
+          }
+
+          svg {
+            width: 40px;
+
+            @media (min-width: 1024px) {
+              width: 48px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

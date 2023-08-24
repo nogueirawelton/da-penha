@@ -1,0 +1,297 @@
+#historia {
+  background: var(--beige-500);
+
+  .background {
+    min-height: 320px;
+    background: url(../../src/img/history-banner.webp);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+
+    @media (min-width: 1024px) {
+      min-height: 480px;
+    }
+  }
+
+  .title {
+    display: grid;
+    @media (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .start {
+      display: flex;
+      justify-content: center;
+      order: 1;
+
+      @media (min-width: 1024px) {
+        order: initial;
+      }
+
+      strong {
+        display: block;
+        color: var(--red-500);
+        font-style: italic;
+        font-family: IntegralCF;
+        margin-top: 3rem;
+        font-size: 3.5rem;
+
+        @media (min-width: 1024px) {
+          margin-top: 2rem;
+          font-size: 5rem;
+        }
+
+        @media (min-width: 1536px) {
+          font-size: 6rem;
+        }
+      }
+    }
+
+    .filled {
+      color: var(--beige-500);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 275px;
+      position: relative;
+      z-index: 1;
+
+      @media (min-width: 768px) {
+        height: 380px;
+      }
+
+      @media (min-width: 1024px) {
+        margin-top: -180px;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        background: var(--red-500);
+        inset: 0;
+        position: absolute;
+        z-index: -1;
+
+        @media (min-width: 1024px) {
+          clip-path: polygon(3% 3%, 100% 0, 100% 100%, 0% 100%);
+        }
+      }
+
+      @media (min-width: 1536px) {
+        margin-top: -250px;
+        height: 480px;
+      }
+
+      p {
+        font-family: Gooper;
+        font-size: 2rem;
+
+        @media (min-width: 1024px) {
+          font-size: 3rem;
+        }
+
+        @media (min-width: 1536px) {
+          font-size: 4rem;
+        }
+      }
+
+      strong {
+        font-family: IntegralCF;
+        font-size: 3.5rem;
+
+        @media (min-width: 1024px) {
+          font-size: 5rem;
+        }
+
+        @media (min-width: 1536px) {
+          font-size: 6rem;
+        }
+      }
+
+      .cartoon {
+        position: absolute;
+        user-select: none;
+        pointer-events: none;
+        display: none;
+
+        @media (min-width: 1024px) {
+          display: block;
+        }
+
+        &:last-of-type {
+          right: 0;
+
+          @media (min-width: 1024px) {
+            bottom: -140px;
+            width: 200px;
+          }
+
+          @media (min-width: 1280px) {
+            bottom: -220px;
+            width: 280px;
+          }
+
+          @media (min-width: 1536px) {
+            bottom: -280px;
+            width: 350px;
+          }
+        }
+
+        &:first-of-type {
+          @media (min-width: 1024px) {
+            left: -135px;
+            bottom: -50px;
+            width: 170px;
+          }
+
+          @media (min-width: 1280px) {
+            left: -180px;
+            bottom: -90px;
+            width: 230px;
+          }
+
+          @media (min-width: 1536px) {
+            left: -250px;
+            bottom: -120px;
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+
+  .timeline {
+    height: 100%;
+    margin-top: 10rem;
+
+    .container {
+      max-width: 1536px;
+      margin-inline: auto;
+      padding-inline: 1rem;
+      height: 100%;
+      position: relative;
+
+      @media (min-width: 1024px) {
+        padding-inline: 2rem;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 1.5rem;
+        height: 100%;
+        border-radius: 2rem;
+        background: var(--red-500);
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+
+        .timeline-item-container {
+          display: flex;
+          gap: 3rem;
+
+          .header {
+            .indicator {
+              width: 85px;
+              height: 1.5rem;
+              background: var(--red-500);
+              position: relative;
+
+              &:after {
+                content: '';
+                display: block;
+                width: 3.5rem;
+                height: 3.5rem;
+                background: var(--red-500);
+                border-radius: 50%;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translate(calc(100% - 10px), -50%);
+              }
+            }
+
+            strong {
+              display: block;
+              font-size: 1.5rem;
+              color: var(--yellow-500);
+              font-family: Gooper;
+              margin-top: 2rem;
+            }
+          }
+
+          .content {
+            img {
+              margin-block: 2rem;
+            }
+
+            p {
+              font-size: 1.125rem;
+              line-height: 1.4;
+
+              & + p {
+                margin-top: 1rem;
+              }
+            }
+          }
+        }
+
+        &:nth-child(1) {
+          padding-top: 5rem;
+        }
+
+        &:nth-child(odd) {
+          .timeline-item-container {
+            grid-column: 1;
+
+            .header {
+              order: 1;
+
+              strong {
+                margin-right: 2rem;
+              }
+
+              .indicator {
+                margin-left: auto;
+
+                &:after {
+                  left: 0;
+                  right: auto;
+                  transform: translate(calc(-100% + 10px), -50%);
+                }
+              }
+            }
+          }
+        }
+
+        &:nth-child(even) {
+          .timeline-item-container {
+            grid-column: 2;
+
+            .header {
+              margin-right: auto;
+
+              strong {
+                margin-left: 2rem;
+              }
+            }
+
+            .content {
+              p {
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

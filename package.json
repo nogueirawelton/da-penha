@@ -1,0 +1,9 @@
+{
+  "name": "da-penha",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "sass src/scss/index.scss:dist/css/styles.css --watch --style compressed"
+  },
+  "main": "index.js",
+  "license": "MIT"
+}
