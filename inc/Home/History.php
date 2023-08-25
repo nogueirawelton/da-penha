@@ -1,19 +1,23 @@
 <section id="historia">
   <div class="background"></div>
-  <div class="title">
-    <div class="start">
-      <strong>Início</strong>
-    </div>
+  <div class="title <?= wp_is_mobile() ? "mobile" : "" ?>">
+    <?php if(!wp_is_mobile()): ?>
+        <div data-timeline="open" class="start">
+          <strong>Início</strong>
+        </div>
+      <?php endif; ?>
     <div class="filled">
       <p>Senta que lá vem</p>
       <strong>História</strong>
       <img class="cartoon"src="<?= get_template_directory_uri() ?>/src/img/cartoon-1.svg" alt="">
       <img class="cartoon"src="<?= get_template_directory_uri() ?>/src/img/cartoon-2.svg" alt="">
+      <?php if(wp_is_mobile()): ?>
+        <button class="start-slide">Começar</button>
+      <?php endif; ?>
     </div>
   </div>
 
-  <?php if(wp_is_mobile()): ?>
-  <?php else: ?>
+  <?php if(!wp_is_mobile()): ?>
     <div class="timeline">
       <div class="container">
         <div class="left">
@@ -57,6 +61,22 @@
               </div>
             </div>
           </div>
+          <div class="timeline-item">
+            <div class="timeline-item-container">
+              <div class="header">
+                <div class="indicator"></div>
+                <strong class="date">1991</strong>
+              </div>
+              <div class="content">
+                <img src="<?= get_template_directory_uri() ?>/src/img/1991.webp" alt="A empresa cresce">
+                <p>A empresa cresce ainda mais, e com
+                  isso chega a nova logo da empresa, e
+                  seguem crescendo até alcançar o
+                  grande sonho Da Penha...
+                  </p>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="right">
           <div class="timeline-item">
@@ -66,7 +86,7 @@
                 <strong class="date">2004</strong>
               </div>
               <div class="content">
-                <img src="<?= get_template_directory_uri() ?>/src/img/2004.webp" alt="Helton Sérgio e Penha">
+                <img src="<?= get_template_directory_uri() ?>/src/img/2004.webp" alt="Bike da rifa">
                 <p>Penha ganha uma bike numa rifa, só que
                   não pedalava. Aí, uma vizinha soltou:
                   "Troca sua bike por um freezer?" Foi o
@@ -74,6 +94,24 @@
                   quebrar fazendo salgadinhos em
                   grandes quantidades sob encomenda !</p>
 
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-item-container">
+              <div class="header">
+                <div class="indicator"></div>
+                <strong class="date">2006</strong>
+              </div>
+              <div class="content">
+                <img src="<?= get_template_directory_uri() ?>/src/img/2006.webp" alt="Reforma do novo espaço">
+                <p>Com a ajuda para reformar o novo espaço
+                  , Familiares, Amigos e Vizinhos se
+                  juntaram à eles nessa mais nova
+                  conquista, foram para 250m² e
+                  conquistaram muitos clientes nessa nova
+                  fase.
+                  </p>
               </div>
             </div>
           </div>
