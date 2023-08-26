@@ -9,8 +9,7 @@
     <div class="controls"></div>
   </div>
 
-  <?php wp_footer() ?>
-
   <script type="module" src="<?= get_template_directory_uri() ?>/dist/js/script.js"></script>
+  <?php wp_footer() ?>
   </body>
 </html>

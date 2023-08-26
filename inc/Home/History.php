@@ -1,16 +1,38 @@
+<?php
+  $timeline_items = [];
+
+  $id = 0;
+
+  while(have_rows("events")) {
+    the_row();
+
+    $timeline_item = (object)[
+      "id" => $id,
+      "year" => get_sub_field("year"),
+      "content" => get_sub_field("content")
+    ];
+
+    $timeline_items[] = $timeline_item;
+    $id++;
+  }
+
+  $last_item = array_pop($timeline_items);
+
+?>
+
 <section id="historia">
   <div class="background"></div>
   <div class="title <?= wp_is_mobile() ? "mobile" : "" ?>">
     <?php if(!wp_is_mobile()): ?>
-        <div data-timeline="open" class="start">
-          <strong>Início</strong>
+        <div class="start">
+          <p>Uma jornada que atravessa décadas, repleta de momentos que aquecem o coração. Vamos voltar no tempo e mergulhar na emocionante história da nossa empresa, uma história que começou a ser escrita lá atrás, no coração de uma família unida.</p>
         </div>
       <?php endif; ?>
     <div class="filled">
       <p>Senta que lá vem</p>
       <strong>História</strong>
-      <img class="cartoon"src="<?= get_template_directory_uri() ?>/src/img/cartoon-1.svg" alt="">
-      <img class="cartoon"src="<?= get_template_directory_uri() ?>/src/img/cartoon-2.svg" alt="">
+      <!-- <img class="cartoon small"src="<?= get_template_directory_uri() ?>/src/img/cartoon-1.svg" alt=""> -->
+      <img class="cartoon big"src="<?= get_template_directory_uri() ?>/src/img/cartoon-2.svg" alt="">
       <?php if(wp_is_mobile()): ?>
         <button class="start-slide">Começar</button>
       <?php endif; ?>
@@ -19,104 +41,45 @@
 
   <?php if(!wp_is_mobile()): ?>
     <div class="timeline">
+      <strong>Início</strong>
       <div class="container">
-        <div class="left">
-          <div class="timeline-item">
+          <?php foreach($timeline_items as $key => $value): ?>
+          <div id="<?= $value->id ?>" class="timeline-item">
             <div class="timeline-item-container">
               <div class="header">
                 <div class="indicator"></div>
-                <strong class="date">91/94</strong>
+                <strong class="date"><?= $value->year ?></strong>
               </div>
               <div class="content">
-                <p>Nascem os filhos, 2 Gêmeas, e 1
-                  Caçula, e com 3 filhos poderosos as
-                  responsabilidades vêm em dose
-                  tripla !</p>
-                <p>Com o sucesso dos seus Salgadinhos
-                  nos aniversários das crianças,
-                  Penha decide empreender, para
-                  ajudar com a renda da família !</p>
+                <?= $value->content ?>
               </div>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-item-container">
-              <div class="header">
-                <div class="indicator"></div>
-                <strong class="date">2005</strong>
-              </div>
-              <div class="content">
-                <img src="<?= get_template_directory_uri() ?>/src/img/2005.webp" alt="Helton Sérgio e Penha">
-                <p>Helton, decide deixar o emprego de Gerente
-                  comercial de uma grande empresa de planos
-                  de saúde, e convida seu irmão Sérgio para se
-                  juntar à ele e a Penha e fundar a "Delícias da Penha".</p>
-                <p>O espaço inicial da fabricação, cerca de 15m²
-                  é a atual lavanderia da casa da Penha e Helton,
-                  e começaram a comercializar as Delícias para
-                  Casas de Festas, Buffet's, Bares e Restaurantes.
-                  </p>
-                <p>A demanda foi crescendo até que se mudaram
-                  para um espaço maior.</p>
+          <?php endforeach; ?>
+        <!-- <div class="right">
+          <?php foreach($timeline_items as $key => $value): if($key % 2 != 0): ?>
+            <div id="<?= $value->id ?>" class="timeline-item">
+              <div class="timeline-item-container">
+                <div class="header">
+                  <div class="indicator"></div>
+                  <strong class="date"><?= $value->year ?></strong>
+                </div>
+                <div class="content">
+                  <?= $value->content ?>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-item-container">
-              <div class="header">
-                <div class="indicator"></div>
-                <strong class="date">1991</strong>
-              </div>
-              <div class="content">
-                <img src="<?= get_template_directory_uri() ?>/src/img/1991.webp" alt="A empresa cresce">
-                <p>A empresa cresce ainda mais, e com
-                  isso chega a nova logo da empresa, e
-                  seguem crescendo até alcançar o
-                  grande sonho Da Penha...
-                  </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="right">
-          <div class="timeline-item">
-            <div class="timeline-item-container">
-              <div class="header">
-                <div class="indicator"></div>
-                <strong class="date">2004</strong>
-              </div>
-              <div class="content">
-                <img src="<?= get_template_directory_uri() ?>/src/img/2004.webp" alt="Bike da rifa">
-                <p>Penha ganha uma bike numa rifa, só que
-                  não pedalava. Aí, uma vizinha soltou:
-                  "Troca sua bike por um freezer?" Foi o
-                  estalo para começar a botar pra
-                  quebrar fazendo salgadinhos em
-                  grandes quantidades sob encomenda !</p>
-
-              </div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-item-container">
-              <div class="header">
-                <div class="indicator"></div>
-                <strong class="date">2006</strong>
-              </div>
-              <div class="content">
-                <img src="<?= get_template_directory_uri() ?>/src/img/2006.webp" alt="Reforma do novo espaço">
-                <p>Com a ajuda para reformar o novo espaço
-                  , Familiares, Amigos e Vizinhos se
-                  juntaram à eles nessa mais nova
-                  conquista, foram para 250m² e
-                  conquistaram muitos clientes nessa nova
-                  fase.
-                  </p>
-              </div>
-            </div>
-          </div>
+          <?php endif; endforeach; ?>
+        </div> -->
+      </div>
+      <div class="end">
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </div>
   <?php endif; ?>
 </section>
+
