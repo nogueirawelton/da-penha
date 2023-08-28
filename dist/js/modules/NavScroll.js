@@ -1,21 +1,27 @@
-import debounce from './debounce.js';
+import debounce from '../utils/debounce.js';
 
 export default class NavScroll {
-  #navLinks;
+  #desktopLinks;
+  #mobileLinks;
 
-  constructor({ element }) {
-    this.#navLinks = document.querySelectorAll(element);
+  constructor({ desktopLinks, mobileLinks }) {
+    this.#desktopLinks = document.querySelectorAll(desktopLinks);
+    this.#mobileLinks = document.querySelectorAll(mobileLinks);
   }
 
   #handleScroll() {
     const refSections = document.querySelectorAll('section');
 
     refSections.forEach((section, index) => {
-      const sectionTop = section.offsetTop - 8 * 16;
+      const sectionTop =
+        section.offsetTop - document.querySelector('header').scrollHeight;
 
       if (window.scrollY >= sectionTop) {
-        this.#navLinks.forEach((item) => (item.dataset.current = 'false'));
-        this.#navLinks[index].dataset.current = 'true';
+        this.#desktopLinks.forEach((item) => (item.dataset.current = 'false'));
+        this.#mobileLinks.forEach((item) => (item.dataset.current = 'false'));
+
+        this.#desktopLinks[index].dataset.current = 'true';
+        this.#mobileLinks[index].dataset.current = 'true';
         return;
       }
     });
@@ -33,7 +39,10 @@ export default class NavScroll {
   #scrollToHashSection(hash) {
     const section = document.querySelector(hash);
 
-    window.scrollTo(0, section.offsetTop - 8 * 16);
+    window.scrollTo(
+      0,
+      section.offsetTop - document.querySelector('header').scrollHeight
+    );
   }
 
   init() {
@@ -44,8 +53,12 @@ export default class NavScroll {
       this.#handleScroll();
     }
 
-    if (!!this.#navLinks.length) {
-      this.#navLinks.forEach((link) => {
+    if (!!this.#desktopLinks.length) {
+      this.#desktopLinks.forEach((link) => {
+        link.addEventListener('click', this.#handleClick.bind(this));
+      });
+
+      this.#mobileLinks.forEach((link) => {
         link.addEventListener('click', this.#handleClick.bind(this));
       });
 

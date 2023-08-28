@@ -12,7 +12,7 @@
     }
   }
 
-  .background {
+  .banner {
     min-height: 320px;
     background: url(../../public/img/history-banner.webp);
     background-size: cover;
@@ -38,8 +38,8 @@
         max-width: 90%;
         line-height: 1.4;
         color: var(--black);
-        font-weight: 700;
         text-align: center;
+        font-family: Gooper;
 
         @media (min-width: 1024px) {
           font-size: 1.25rem;
@@ -92,7 +92,7 @@
         }
       }
 
-      strong {
+      h2 {
         font-family: IntegralCF;
         font-size: 3.5rem;
 
@@ -340,6 +340,7 @@
             p {
               line-height: 1.4;
               color: var(--black);
+              font-family: Gooper;
 
               @media (min-width: 1024px) {
                 font-size: 1.25rem;
@@ -360,6 +361,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: -68px;
+    padding-inline: 2rem;
 
     .last-arrow {
       display: flex;
@@ -375,20 +377,33 @@
         background-position: center;
         padding-inline: 4rem;
         padding-block: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
+
+        @media (min-width: 1024px) {
+          margin-bottom: 1rem;
+        }
 
         strong {
           display: block;
-          font-size: 2.5rem;
           color: var(--red-500);
           font-family: Gooper;
+          font-size: 1.5rem;
+
+          @media (min-width: 1024px) {
+            font-size: 2.5rem;
+          }
         }
       }
 
       img {
-        max-width: 250px;
+        max-width: 150px;
+        width: 100%;
         user-select: none;
         pointer-events: none;
+
+        @media (min-width: 1024px) {
+          max-width: 250px;
+        }
       }
     }
 
@@ -410,16 +425,18 @@
   .last-item {
     max-width: 1536px;
     margin-inline: auto;
-    padding-inline: 1rem;
+    padding-left: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
 
     @media (min-width: 1024px) {
-      padding-inline: 2rem;
+      padding-left: 2rem;
     }
 
     .timeline-item {
+      padding-bottom: 5rem;
+
       .header {
         display: flex;
         justify-content: center;
@@ -437,6 +454,7 @@
         p {
           line-height: 1.4;
           color: var(--black);
+          font-family: Gooper;
 
           @media (min-width: 1024px) {
             font-size: 1.25rem;
@@ -445,6 +463,67 @@
           & + p {
             margin-top: 1rem;
           }
+        }
+      }
+    }
+
+    .next-chapter {
+      background: var(--yellow-500);
+      width: 100%;
+      position: relative;
+      clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-self: end;
+      padding-right: 50px;
+      justify-self: end;
+      gap: 5rem;
+      max-width: 90%;
+      position: relative;
+
+      @media (min-width: 1024px) {
+        padding-right: 100px;
+        max-width: 85%;
+      }
+
+      p {
+        margin-top: 4rem;
+        text-align: center;
+        font-family: Gooper;
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: var(--red-500);
+        padding-inline: 1rem;
+      }
+
+      img {
+        position: absolute;
+        bottom: 0.5rem;
+        right: 0.5rem;
+        max-width: 150px;
+        z-index: 2;
+      }
+
+      .social {
+        margin-left: 1rem;
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 100%;
+        background: var(--red-500);
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        @media (min-width: 1024px) {
+          width: 100px;
         }
       }
     }

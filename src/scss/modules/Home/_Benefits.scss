@@ -1,0 +1,99 @@
+#benefits {
+  background-color: var(--yellow-500);
+  margin-top: -1px;
+  padding-block: 3rem;
+
+  @media (min-width: 1024px) {
+    background-image: url(../../public/img/recipe.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    padding-block: 5rem 10rem;
+  }
+
+  .container {
+    max-width: 1536px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+
+    @media (min-width: 1024px) {
+      padding-inline: 2rem;
+    }
+
+    .cards-container {
+      display: grid;
+      gap: 5rem 2rem;
+
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 1rem;
+
+        .penha {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+          gap: 0 2rem;
+
+          @media (min-width: 1024px) {
+            flex-direction: row;
+          }
+
+          img {
+            max-width: 200px;
+            max-height: 200px;
+          }
+
+          @media (min-width: 1024px) {
+            img {
+              max-width: 250px;
+              max-height: 250px;
+            }
+          }
+
+          span {
+            color: var(--red-500);
+            font-weight: bold;
+            font-size: 5rem;
+          }
+        }
+
+        img {
+          max-width: 100px;
+          max-height: 100px;
+
+          @media (min-width: 1024px) {
+            max-width: 150px;
+            max-height: 150px;
+          }
+        }
+
+        strong {
+          display: block;
+          text-transform: uppercase;
+          font-size: 1rem;
+          margin-top: 2rem;
+          text-align: center;
+          color: var(--black);
+          font-family: IntegralCF;
+        }
+
+        p {
+          max-width: 350px;
+          text-align: center;
+          margin-inline: auto;
+          margin-top: 1rem;
+          line-height: 1.4;
+          font-family: Gooper;
+          color: var(--black);
+        }
+      }
+    }
+  }
+}

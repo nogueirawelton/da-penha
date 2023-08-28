@@ -36,7 +36,7 @@
           max-width: 100%;
         }
 
-        strong {
+        h1 {
           display: block;
           line-height: 1.2;
           color: var(--yellow-500);
@@ -66,6 +66,7 @@
             display: inline-block;
             position: relative;
             z-index: 2;
+            margin-left: 0.5rem;
 
             .blink {
               transform: translate(calc(100% + 20px), -20px);

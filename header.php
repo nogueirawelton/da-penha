@@ -6,6 +6,10 @@
 
   <link rel="preload" href="<?= get_template_directory_uri() ?>/public/img/logo.png" as="image">
 
+  <link rel="manifest" href="<?= get_template_directory_uri() ?>/public/site.webmanifest" />
+  <link rel="apple-touch-icon" href="<?= get_template_directory_uri() ?>/public/apple-touch-icon.png"  type="image/png"/>
+  <link rel="shortcut icon" href="<?= get_template_directory_uri() ?>/public/favicon.ico" type="image/x-icon">
+
   <title>
     <?php
         if(is_front_page()) {
@@ -29,32 +33,11 @@
     <div class="container">
       <img src="<?= get_template_directory_uri() ?>/public/img/logo.png" alt="Da Penha Salgados">
 
-      <button data-menu="close">
+      <button data-menu="open">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#ffdcb5" viewBox="0 0 256 256"><path d="M32,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H40A8,8,0,0,1,32,64ZM216,96H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,40H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,40H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg>
       </button>
 
-      <nav>
-        <ul>
-          <li>
-            <a data-current="true" href="#inicio">Início</a>
-          </li>
-          <li>
-            <a data-current="false" href="#historia">História</a>
-          </li>
-          <li>
-            <a data-current="false" href="#produtos">Produtos</a>
-          </li>
-          <li>
-            <a data-current="false" href="#lojinha">Lojinha</a>
-          </li>
-          <li>
-            <a data-current="false" href="#revenda">Revenda</a>
-          </li>
-          <li>
-            <a data-current="false" href="#contato">Contato</a>
-          </li>
-        </ul>
-      </nav>
+        <?php require get_template_directory() . "/inc/Menu.php" ?>
 
     </div>
   </header>

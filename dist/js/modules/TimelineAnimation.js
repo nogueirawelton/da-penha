@@ -1,4 +1,4 @@
-export class TimelineAnimation {
+export default class TimelineAnimation {
   #timelineItems;
 
   constructor({ element }) {
