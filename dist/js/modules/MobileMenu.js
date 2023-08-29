@@ -10,11 +10,11 @@ export default class MobileMenu {
   }
 
   #handleCloseMenu() {
-    this.#menu.dataset.open = 'true';
+    this.#menu.dataset.open = 'false';
   }
 
   #handleOpenMenu() {
-    this.#menu.classList.add('false');
+    this.#menu.dataset.open = 'true';
   }
 
   init() {

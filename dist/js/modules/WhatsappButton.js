@@ -1,5 +1,3 @@
-import debounce from '../utils/debounce.js';
-
 export default class WhatsappButton {
   #button;
   constructor({ element }) {
@@ -9,7 +7,7 @@ export default class WhatsappButton {
   #handleScroll() {
     if (
       window.scrollY >
-      window.innerHeight - document.querySelector('header').scrollHeight
+      window.innerHeight - document.querySelector('header').scrollHeight - 1
     ) {
       this.#button.dataset.show = 'true';
       return;
@@ -20,10 +18,7 @@ export default class WhatsappButton {
 
   init() {
     if (this.#button) {
-      window.addEventListener(
-        'scroll',
-        debounce(this.#handleScroll.bind(this), 100)
-      );
+      window.addEventListener('scroll', this.#handleScroll.bind(this), 100);
     }
 
     return this;

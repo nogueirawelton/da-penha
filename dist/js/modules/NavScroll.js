@@ -10,7 +10,7 @@ export default class NavScroll {
   }
 
   #handleScroll() {
-    const refSections = document.querySelectorAll('section');
+    const refSections = document.querySelectorAll('section[data-nav]');
 
     refSections.forEach((section, index) => {
       const sectionTop =

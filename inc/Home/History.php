@@ -11,10 +11,11 @@
     ];
     $timeline_items[] = $timeline_item;
   }
+  wp_reset_postdata();
   $last_item = array_pop($timeline_items);
 ?>
 
-<section id="historia">
+<section id="historia" data-nav>
   <div class="banner"></div>
 
   <div class="title <?= wp_is_mobile() ? "mobile" : "" ?>">
@@ -27,7 +28,7 @@
     <div class="filled">
       <p>Senta que lá vem</p>
       <h2>História</h2>
-      <img class="cartoon big"src="<?= get_template_directory_uri() ?>/public/img/cartoon.png" alt="">
+      <img class="cartoon big"src="<?= get_template_directory_uri() ?>/public/img/webp/respect-cartoon.webp" alt="">
 
       <?php if(wp_is_mobile()): ?>
         <button class="start-slide">Começar</button>
@@ -69,7 +70,7 @@
           <div class="year">
             <strong class="date"><?= $last_item->year ?></strong>
           </div>
-          <img src="<?= get_template_directory_uri() ?>/public/img/big-arrow.svg" alt="">
+          <img src="<?= get_template_directory_uri() ?>/public/img/svg/big-arrow.svg" alt="Últimas atualizações">
         </div>
 
       </div>
@@ -98,7 +99,7 @@
             <a href="" target="_blank">
               <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#9d1824" viewBox="0 0 256 256"><path d="M232,128a104.16,104.16,0,0,1-91.55,103.26,4,4,0,0,1-4.45-4V152h24a8,8,0,0,0,8-8.53,8.17,8.17,0,0,0-8.25-7.47H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,8-8.53A8.17,8.17,0,0,0,167.73,80H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0-8,8.53A8.17,8.17,0,0,0,96.27,152H120v75.28a4,4,0,0,1-4.44,4A104.15,104.15,0,0,1,24.07,124.09c2-54,45.74-97.9,99.78-100A104.12,104.12,0,0,1,232,128Z"></path></svg>
             </a>
-            <img src="<?= get_template_directory_uri() ?>/public/img/history-cartoon.svg" alt="">
+            <img src="<?= get_template_directory_uri() ?>/public/img/svg/next-chapter-cartoon.svg" alt="Acompanhe os próximos capítulos">
           </div>
           
         </div>

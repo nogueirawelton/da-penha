@@ -1,11 +1,11 @@
-<section id="inicio">
+<section id="inicio" data-nav>
   <div class="banner">
     
     <video autoplay muted loop src="<?= get_template_directory_uri() ?>/public/video/banner.webm"></video>
 
     <div class="container">
       <div class="content">
-        <h1>Todo <span>Salgadinho <img src="<?= get_template_directory_uri() ?>/public/img/ornament.svg" alt=""></span><br>tem uma <span>história! <img src="<?= get_template_directory_uri() ?>/public/img/ornament.svg" alt=""><img class="blink" src="<?= get_template_directory_uri() ?>/public/img/blink.svg" alt=""></span></h1>
+        <h1>Todo <span>Salgadinho <img src="<?= get_template_directory_uri() ?>/public/img/svg/banner-ornament.svg" alt=""></span><br>tem uma <span>história! <img src="<?= get_template_directory_uri() ?>/public/img/svg/banner-ornament.svg" alt=""><img class="blink" src="<?= get_template_directory_uri() ?>/public/img/svg/blink.svg" alt=""></span></h1>
       </div>
 
       <div class="social">

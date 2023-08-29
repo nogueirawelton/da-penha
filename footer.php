@@ -8,7 +8,6 @@
     <div class="slide"></div>
     <div class="controls"></div>
   </div> -->
-  
 
     <div class="mobile-menu">
       <div class="header">
@@ -19,8 +18,8 @@
       <?php require get_template_directory() . "/inc/Menu.php" ?>
     </div>
 
-    <a href="" target="_blank" class="whatsapp-button">
-      <img src="<?= get_template_directory_uri() ?>/public/img/whatsapp-icon.png" alt="Entre em contato por whatsapp!">
+    <a href="" target="_blank" class="whatsapp-button" title="Whatsapp">
+      <img src="<?= get_template_directory_uri() ?>/public/img/webp/whatsapp-icon.webp" alt="Entre em contato por whatsapp!">
     </a>
 
     <script type="module" src="<?= get_template_directory_uri() ?>/dist/js/script.js"></script>
