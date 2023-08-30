@@ -7,7 +7,9 @@ export default class WhatsappButton {
   #handleScroll() {
     if (
       window.scrollY >
-      window.innerHeight - document.querySelector('header').scrollHeight - 1
+        window.innerHeight - document.querySelector('header').scrollHeight &&
+      window.scrollY <
+        document.querySelector('footer').offsetTop - window.innerHeight
     ) {
       this.#button.dataset.show = 'true';
       return;

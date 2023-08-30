@@ -3,10 +3,12 @@ import debounce from '../utils/debounce.js';
 export default class NavScroll {
   #desktopLinks;
   #mobileLinks;
+  #footerLinks;
 
-  constructor({ desktopLinks, mobileLinks }) {
+  constructor({ desktopLinks, mobileLinks, footerLinks }) {
     this.#desktopLinks = document.querySelectorAll(desktopLinks);
     this.#mobileLinks = document.querySelectorAll(mobileLinks);
+    this.#footerLinks = document.querySelectorAll(footerLinks);
   }
 
   #handleScroll() {
@@ -59,6 +61,10 @@ export default class NavScroll {
       });
 
       this.#mobileLinks.forEach((link) => {
+        link.addEventListener('click', this.#handleClick.bind(this));
+      });
+
+      this.#footerLinks.forEach((link) => {
         link.addEventListener('click', this.#handleClick.bind(this));
       });
 

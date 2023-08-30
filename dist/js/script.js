@@ -11,6 +11,7 @@ window.onload = () => {
   NavScroll.initialize({
     desktopLinks: 'header nav a',
     mobileLinks: '.mobile-menu nav a',
+    footerLinks: 'footer .products a',
   });
 
   TimelineAnimation.initialize({ element: '[data-animate]' });

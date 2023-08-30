@@ -31,7 +31,7 @@
 <body>
   <header data-scrolled="false">
     <div class="container">
-      <img src="<?= get_template_directory_uri() ?>/public/img/webp/logo.webp" alt="Da Penha Salgados">
+      <img src="<?= get_template_directory_uri() ?>/public/img/webp/logo.webp" alt="Da Penha Salgaderia">
 
       <button data-menu="open">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#ffdcb5" viewBox="0 0 256 256"><path d="M32,64a8,8,0,0,1,8-8H216a8,8,0,0,1,0,16H40A8,8,0,0,1,32,64ZM216,96H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,40H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Zm0,40H88a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg>

@@ -1,13 +1,151 @@
+footer {
+  background: var(--red-500);
+
+  & > .container {
+    max-width: 1536px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    padding-block: 2rem;
+    display: grid;
+    gap: 3rem 1rem;
+    color: var(--beige-500);
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    img {
+      margin-inline: auto;
+
+      @media (min-width: 768px) {
+        margin-inline: 0;
+      }
+    }
+
+    strong {
+      font-family: IntegralCF;
+      display: block;
+      font-size: 1.25rem;
+      text-align: center;
+
+      @media (min-width: 768px) {
+        text-align: left;
+      }
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+
+      li {
+        text-align: center;
+
+        @media (min-width: 768px) {
+          text-align: left;
+        }
+
+        a {
+          font-family: Gooper;
+          font-weight: bold;
+          font-size: 1.125rem;
+
+          &:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+          }
+        }
+      }
+    }
+
+    .links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      justify-content: center;
+
+      @media (min-width: 768px) {
+        justify-content: flex-start;
+      }
+
+      a {
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: var(--beige-500);
+        transition: all 0.3s;
+
+        &:hover {
+          transform: translateY(-0.5rem);
+        }
+
+        svg {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+
+    @media (min-width: 1024px) {
+      padding-inline: 2rem;
+    }
+  }
+
+  .rights {
+    background: var(--beige-500);
+    color: var(--red-500);
+
+    .container {
+      max-width: 1536px;
+      margin-inline: auto;
+      padding-inline: 1rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: space-between;
+      padding-block: 1rem;
+      flex-direction: column;
+
+      @media (min-width: 1024px) {
+        padding-inline: 2rem;
+        flex-direction: row;
+      }
+
+      p {
+        font-weight: 500;
+        text-align: center;
+
+        a {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
 .whatsapp-button {
   position: fixed;
   z-index: 999;
   bottom: 1rem;
   right: 1rem;
   display: none;
+  transition: filter 0.6s;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
 
   &[data-show='true'] {
     display: block;
-    animation: showDown 0.6s forwards;  }
+    animation: showDown 0.6s forwards;
+  }
 
   img {
     max-width: 64px;
