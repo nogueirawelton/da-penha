@@ -40,7 +40,7 @@
 
       <div class="right">
         <div class="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.163812369509!2d-43.03271528833272!3d-22.944193439123755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99860f9eae3c81%3A0x3c052c2814cbded0!2sAv.%20Central%20Ewerton%20Xavier%2C%201800%20-%20Itaipu%2C%20Niter%C3%B3i%20-%20RJ%2C%2024340-105!5e0!3m2!1spt-BR!2sbr!4v1693357689365!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe title="Endereço Loja Itaipu" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.163812369509!2d-43.03271528833272!3d-22.944193439123755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99860f9eae3c81%3A0x3c052c2814cbded0!2sAv.%20Central%20Ewerton%20Xavier%2C%201800%20-%20Itaipu%2C%20Niter%C3%B3i%20-%20RJ%2C%2024340-105!5e0!3m2!1spt-BR!2sbr!4v1693357689365!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
         <div class="schedules">
