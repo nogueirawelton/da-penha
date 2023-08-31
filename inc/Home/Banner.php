@@ -1,7 +1,7 @@
 <section id="inicio" data-nav>
   <div class="banner">
     
-    <video autoplay muted loop src="<?= get_template_directory_uri() ?>/public/video/banner.webm"></video>
+    <video autoplay muted loop src="<?= get_field("video") ?>"></video>
 
     <div class="container">
       <div class="content">

@@ -9,5 +9,9 @@
 
   <div class="container">
     <?= do_shortcode('[contact-form-7 title="Revenda"]') ?>
+    <div class="wpp">
+      <strong>ou</strong>
+      <a href="">Whatsapp</a>
+    </div>
   </div>
 </section>

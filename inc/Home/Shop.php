@@ -30,10 +30,8 @@
           </a>
 
         </div>
-
-        <div class="wpp">
-          <a href="https://wa.me/552136177119?text=Ol%C3%A1%21+Gostaria+de+fazer+um+pedido+%21" target="_blank">Peça pelo whatsapp</a>
-          <img src="<?= get_template_directory_uri() ?>/public/img/svg/bike-cartoon.svg" alt="Peça nosso devlivery por whatsapp!">
+        <div class="shop-image">
+          <img src="https://picsum.photos/1920/1080" alt="teste">
         </div>
         
       </div>
@@ -73,6 +71,10 @@
 
         </div>
       </div>
+    </div>
+    <div class="wpp">
+      <a href="https://wa.me/552136177119?text=Ol%C3%A1%21+Gostaria+de+fazer+um+pedido+%21" target="_blank">Peça pelo whatsapp</a>
+      <img src="<?= get_template_directory_uri() ?>/public/img/svg/bike-cartoon.svg" alt="Peça nosso devlivery por whatsapp!">
     </div>
   </div>
   
