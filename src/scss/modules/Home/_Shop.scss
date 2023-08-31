@@ -1,5 +1,6 @@
 #lojinha {
   background: var(--beige-500);
+  padding-bottom: 5rem;
 
   .banner {
     min-height: 320px;
@@ -143,6 +144,7 @@
             color: var(--yellow-500);
             width: fit-content;
             font-size: 1.15rem;
+            align-items: center;
 
             @media (min-width: 640px) {
               font-size: 1.5rem;

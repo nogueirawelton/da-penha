@@ -11,10 +11,12 @@ export default class MobileMenu {
 
   #handleCloseMenu() {
     this.#menu.dataset.open = 'false';
+    document.documentElement.removeAttribute("style");
   }
 
   #handleOpenMenu() {
     this.#menu.dataset.open = 'true';
+    document.documentElement.style.overflow = 'hidden';
   }
 
   init() {

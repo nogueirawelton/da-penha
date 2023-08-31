@@ -9,6 +9,11 @@
 @use './modules/Home/Benefits';
 @use './modules/Home/Products';
 @use './modules/Home/Shop';
-@use './modules/Home/Contato';
+@use './modules/Home/Resale';
+@use './modules/Home/Contact';
 
 @use './modules/footer';
+
+.wpcf7-response-output {
+  display: none;
+}

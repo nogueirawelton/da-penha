@@ -12,7 +12,8 @@
   <?php require_once get_template_directory() . "/inc/Home/Benefits.php" ?>
   <?php require_once get_template_directory() . "/inc/Home/Products.php" ?>
   <?php require_once get_template_directory() . "/inc/Home/Shop.php" ?>
-  <?php require_once get_template_directory() . "/inc/Home/Contato.php" ?>
+  <?php require_once get_template_directory() . "/inc/Home/Resale.php" ?>
+  <?php require_once get_template_directory() . "/inc/Home/Contact.php" ?>
 </main>
 
 <?php get_footer() ?>

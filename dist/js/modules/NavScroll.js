@@ -55,7 +55,7 @@ export default class NavScroll {
       this.#handleScroll();
     }
 
-    if (!!this.#desktopLinks.length) {
+    if (this.#desktopLinks.length) {
       this.#desktopLinks.forEach((link) => {
         link.addEventListener('click', this.#handleClick.bind(this));
       });

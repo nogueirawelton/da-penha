@@ -31,7 +31,7 @@
       <img class="cartoon big"src="<?= get_template_directory_uri() ?>/public/img/webp/respect-cartoon.webp" alt="">
 
       <?php if(wp_is_mobile()): ?>
-        <button class="start-slide">Começar</button>
+        <button class="start-slide" data-timeline="open">Começar</button>
       <?php endif; ?>
 
     </div>
@@ -45,7 +45,7 @@
       <?php if(have_rows("events")): ?>
         <div class="container">
             <?php foreach($timeline_items as $key => $value): ?>
-              <div id="<?= $value->id ?>" class="timeline-item" data-animate>
+              <div class="timeline-item" data-animate>
                 <div class="timeline-item-container">
                   <div class="header">
                     <div class="indicator"></div>
