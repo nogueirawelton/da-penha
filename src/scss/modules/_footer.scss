@@ -357,7 +357,7 @@ footer {
         margin-inline: auto;
 
         @media (min-width: 640px) {
-          max-width: 400px;
+          max-width: 480px;
         }
       }
 
@@ -417,10 +417,14 @@ footer {
 
   .image {
     position: relative;
+
     img {
-      height: 85vh;
-      width: 95vw;
+      max-width: 360px;
       object-fit: contain;
+
+      @media (min-width: 640px) {
+        max-width: 440px;
+      }
     }
 
     span.wpcf7-not-valid-tip {
@@ -435,8 +439,12 @@ footer {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      bottom: 25%;
+      bottom: 120px;
       max-width: 200px;
+
+      @media (min-width: 640px) {
+        bottom: 150px;
+      }
 
       input {
         width: 100%;
@@ -450,11 +458,6 @@ footer {
 
         &::placeholder {
           color: var(--black);
-        }
-
-        @media (min-height: 800px) {
-          height: 2rem;
-          border-radius: 2rem;
         }
 
         &[type='submit'] {
