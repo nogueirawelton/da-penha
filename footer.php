@@ -59,7 +59,7 @@
     <div class="rights">
       <div class="container">
         <p><strong>Da Penha Salgaderia</strong> - Copyright ® 2023 - Todos os direitos reservados</p>
-        <p>Desenvolvido por: <a href="https://welton-nogueira.vercel.app/" target="_blank">Welton Nogueira</a></p>
+        <p>Desenvolvido com ❤ por: <a href="https://welton-nogueira.vercel.app/" target="_blank">Welton Nogueira</a></p>
       </div>
     </div>
   </footer>

@@ -4,7 +4,6 @@ export default function popup(element) {
 
   function closePopup() {
     popup.dataset.show = 'false';
-    document.documentElement.removeAttribute('style');
   }
 
   function popupLead() {
@@ -15,7 +14,6 @@ export default function popup(element) {
   function openPopup() {
     if (popup) {
       popup.dataset.show = 'true';
-      document.documentElement.style.overflow = 'hidden';
 
       close.addEventListener('click', closePopup);
       window.addEventListener('keyup', (e) => {

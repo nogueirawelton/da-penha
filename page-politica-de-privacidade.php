@@ -9,44 +9,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade - Da penha Salgaderia</title>
+    <title>Política de Privacidade | Da penha Salgaderia</title>
+
+    <link rel="manifest" href="<?= get_template_directory_uri() ?>/public/site.webmanifest" />
+    <link rel="apple-touch-icon" href="<?= get_template_directory_uri() ?>/public/apple-touch-icon.png"  type="image/png"/>
+    <link rel="shortcut icon" href="<?= get_template_directory_uri() ?>/public/favicon.ico" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
         }
+
         header {
             text-align: center;
             margin-bottom: 20px;
         }
+
         h1 {
             margin: 0;
             padding: 20px 0;
         }
+
         section {
             margin-bottom: 40px;
             padding-bottom: 20px;
             border-bottom: 1px solid #ccc;
         }
+
         h2 {
             margin-top: 0;
         }
+
         ul {
             padding-left: 20px;
         }
+
         footer {
             font-size: 14px;
             color: #666;
         }
+
         address {
             margin-top: 10px;
         }
+
     </style>
 </head>
 <body>
-    <header>
-        <h1>Política de Privacidade</h1>
-    </header>
+    <h1>Política de Privacidade</h1>
 
     <main>
         <section>

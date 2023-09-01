@@ -31,7 +31,13 @@
 
         </div>
         <div class="shop-image">
-          <img src="https://picsum.photos/1920/1080" alt="teste">
+          <?php if(get_field("shop_image")): ?>
+            <img src="<?= get_field("shop_image") ?>" alt="teste">
+          <?php else: ?>
+            <div class="preview">
+              <strong>Em Breve!</strong>
+            </div>
+          <?php endif; ?>
         </div>
         
       </div>

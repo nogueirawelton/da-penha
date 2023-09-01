@@ -1,4 +1,4 @@
-#lojinha {
+#home #lojinha {
   background: var(--beige-500);
   padding-bottom: 5rem;
 
@@ -173,6 +173,26 @@
 
           @media (min-width: 1024px) {
             height: calc(100% - 480px);
+          }
+
+          .preview {
+            background: var(--yellow-500);
+            height: 100%;
+            display: grid;
+            place-content: center;
+
+            strong {
+              padding: 1rem 2rem;
+              font-family: Gooper;
+              background: var(--red-500);
+              color: var(--yellow-500);
+              font-size: 1.5rem;
+              clip-path: polygon(0 0, 100% 12%, 95% 95%, 0% 100%);
+
+              @media (min-width: 1024px) {
+                font-size: 2rem;
+              }
+            }
           }
 
           img {

@@ -28,7 +28,7 @@
     <div class="filled">
       <p>Senta que lá vem</p>
       <h2>História</h2>
-      <img class="cartoon big"src="<?= get_template_directory_uri() ?>/public/img/webp/respect-cartoon.webp" alt="">
+      <img class="cartoon big"src="<?= get_template_directory_uri() ?>/public/img/webp/respect-cartoon.webp" alt="Respeita minha história">
 
       <?php if(wp_is_mobile()): ?>
         <button class="start-slide" data-timeline="open">Começar</button>

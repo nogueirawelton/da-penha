@@ -6,7 +6,6 @@
 
   <link rel="preload" href="<?= get_template_directory_uri() ?>/public/img/svg/logo.svg" as="image">
 
-  <link rel="manifest" href="<?= get_template_directory_uri() ?>/public/site.webmanifest" />
   <link rel="apple-touch-icon" href="<?= get_template_directory_uri() ?>/public/apple-touch-icon.png"  type="image/png"/>
   <link rel="shortcut icon" href="<?= get_template_directory_uri() ?>/public/favicon.ico" type="image/x-icon">
 

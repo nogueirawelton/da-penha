@@ -3,6 +3,9 @@
 @use './modules/reset';
 
 @use './modules/header';
+@use './modules/footer';
+
+// --------------------- HOME --------------------- //
 
 @use './modules/Home/Banner';
 @use './modules/Home/History';
@@ -12,8 +15,7 @@
 @use './modules/Home/Resale';
 @use './modules/Home/Contact';
 
-@use './modules/footer';
-
+// --------------------- GLOBALS --------------------- //
 .wpcf7-response-output {
   display: none;
 }
