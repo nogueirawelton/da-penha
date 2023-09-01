@@ -70,6 +70,18 @@
         text-decoration: none;
       }
     </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVFLNGW6H5%22%3E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EVFLNGW6H5');
+  </script>
+  
+  <script>
+    gtag('event', 'conversion', {'send_to': 'AW-863435822/nParCO__tNsYEK7425sD'});
+  </script>
 </head>
 <body>
 
