@@ -25,8 +25,8 @@ export default function wpf7() {
     const input = event.target.querySelector("[type='submit']");
     removeIsLoading(input);
 
-    window.open('/contato-realizado', '_blank');
     popupLead();
+    window.open('/contato-realizado', '_blank');
   });
 
   document.addEventListener('wpcf7invalid', (event) => {
