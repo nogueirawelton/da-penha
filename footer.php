@@ -80,7 +80,7 @@
                     <?= the_sub_field("content") ?>
                   </div>
                 </div>
-              <?php endwhile; ?>
+              <?php endwhile; wp_reset_postdata(); ?>
               <div class="swiper-slide end">
                 <img src="<?= get_template_directory_uri() ?>/public/img/svg/next-chapter-cartoon.svg" alt="Acompanhe os próximos capítulos">
                 

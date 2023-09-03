@@ -21,11 +21,13 @@
                   <div class="item-container">
                     <div class="image">
                       <img src="<?= get_sub_field("image") ?>" alt="<?= get_sub_field("name") ?>">
-                      <div class="overlay">
-                        <div class="orange">
-                          <p><?= get_sub_field("description") ?></p>
+                      <?php if(get_sub_field("description")): ?>
+                        <div class="overlay">
+                          <div class="orange">
+                            <p><?= get_sub_field("description") ?></p>
+                          </div>
                         </div>
-                      </div>
+                      <?php endif; ?>
                     </div>
                     <h4 class="orange"><?= get_sub_field("name") ?></h4>
                   </div>
