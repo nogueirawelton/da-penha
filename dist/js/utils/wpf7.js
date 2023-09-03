@@ -26,7 +26,13 @@ export default function wpf7() {
     removeIsLoading(input);
 
     popupLead();
-    window.open('/contato-realizado', '_blank');
+
+    console.log(event.target.parentElement.parentElement);
+    if (event.target.parentElement.parentElement.classList.contains('image')) {
+      window.open('/contato-realizado?f=reinauguracao', '_blank');
+      return;
+    }
+    window.open('/contato-realizado?f=revenda', '_blank');
   });
 
   document.addEventListener('wpcf7invalid', (event) => {

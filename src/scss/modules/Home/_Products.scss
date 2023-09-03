@@ -172,6 +172,7 @@
 
               div {
                 padding: 1rem 2rem 2rem;
+                user-select: none;
 
                 p {
                   font-size: 1rem;
@@ -195,7 +196,6 @@
             text-align: center;
             margin-top: 1rem;
             padding-inline: 2rem;
-            height: 34px;
 
             @media (min-width: 1024px) {
               font-size: 1.75rem;

@@ -25,7 +25,7 @@ export default class TimelineAnimation {
   }
 
   init() {
-    if (this.#timelineItems.length && window.innerWidth > 1024) {
+    if (this.#timelineItems.length) {
       this.#observe();
     }
     return this;
